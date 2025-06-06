@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'GothicDefault';
+  src: url(../assets/fonts/Inkulinati-Regular.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothicTitle';
+  src: url(../assets/fonts/newcyrillicgoth.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* :root {
+  font-family: 'GothicDefault', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: black;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} */
+
+body {
+  font-family: 'GothicDefault', sans-serif;
+  color: #F3EFD4;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(180deg,rgba(24, 24, 24, 0) 0%, rgba(24, 24, 24, 0) 40%, rgba(24, 24, 24, 1) 100%), 
+                            linear-gradient(90deg,rgba(24, 24, 24, 1) 0%, rgba(24, 24, 24, 0) 35%, rgba(24, 24, 24, 0) 65%, rgba(24, 24, 24, 1) 100%), 
+                            url(../assets/parchment-background.jpg);
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+cap {
+  font-family: 'GothicTitle', serif;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+.text-shd {
+  text-shadow: 2px 2px 2.5px rgb(0 0 0 / 0.5);
+}
