@@ -159,7 +159,7 @@
             placement="top"
             triggeredBy={`#dropdown-select-${index}`}
             class="w-[162px] h-[224px] p-2 -translate-x-[59px] -translate-y-[42px]
-            text-[#F3EFD4] bg-[#212121] text-center"
+            text-[#F3EFD4] bg-[#212121] text-center overflow-y-auto"
         >
             <DropdownHeader class="border-b-1">
                 <label class="flex items-center">
