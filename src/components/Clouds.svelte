@@ -17,3 +17,15 @@
     alt="cloud"
     class="absolute left-1/5 top-[332px] opacity-60"
 />
+
+<img
+    src={smallCloud}
+    alt="cloud"
+    class="absolute left-3/4 top-[632px] opacity-60"
+/>
+
+<img
+    src={bigCloud}
+    alt="cloud"
+    class="absolute left-1/8 top-[804px] opacity-60"
+/>

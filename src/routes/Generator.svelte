@@ -9,6 +9,7 @@
     //картинки
     import headerVignette from "@/assets/vignettes/header-vignette.png";
     import banner from "@/assets/banner.png";
+    import zaec from "@/assets/heroes/zaec.png";
 
     //иконки
     import link from "@//assets/icons/link.svg";
@@ -128,6 +129,20 @@
 </Modal>
 
 <!-- *Главный контент -->
+<!-- Заяц слева -->
+<img
+    src={zaec}
+    alt="zaec"
+    class="absolute h-[124px] -mt-[72px] -translate-x-[390px] hero-shd"
+/>
+
+<!-- Заяц справа -->
+<img
+    src={zaec}
+    alt="zaec"
+    class="absolute h-[124px] -mt-[72px] -scale-x-100 translate-x-[390px] hero-shd"
+/>
+
 <img src={banner} alt="banner" class="w-[900px] -translate-y-10" />
 
 <!-- <h1 class="absolute -translate-y-4 capitalize">{cityName}</h1> -->

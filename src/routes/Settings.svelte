@@ -4,6 +4,8 @@
 
     //картинки
     import headerVignette from "@/assets/vignettes/header-vignette.png";
+    import doctor from "@/assets/heroes/doctor.png";
+    import kolya from "@/assets/heroes/kolya.png";
 
     let vulgarity = $state(localStorage["vulgarity"]);
 
@@ -20,6 +22,20 @@
     src={headerVignette}
     alt="header-vignette"
     class="absolute w-[344px] mt-5 -scale-100"
+/>
+
+<!-- *Чумной доктор -->
+<img
+    src={doctor}
+    alt="doctor"
+    class="absolute h-[284px] mt-12 -translate-x-[424px] hero-shd"
+/>
+
+<!-- *Коля -->
+<img
+    src={kolya}
+    alt="kolya"
+    class="absolute h-[284px] mt-12 translate-x-[452px] hero-shd-r"
 />
 
 <!-- *Параметры -->
