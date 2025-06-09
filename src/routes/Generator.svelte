@@ -1,6 +1,6 @@
 <script>
     //компоненты
-    import { Modal } from "flowbite-svelte";
+    import { Modal, Tooltip } from "flowbite-svelte";
     import { CloseOutline, PlusOutline } from "flowbite-svelte-icons";
     import { onMount } from "svelte";
     import { scale } from "svelte/transition";
@@ -135,7 +135,7 @@
     bind:value={cityName}
     placeholder="Название города"
     type="text"
-    class="absolute w-[532px] -translate-y-4.5 capitalize title-input"
+    class="absolute w-[594px] -translate-y-4.5 capitalize title-input"
 />
 
 <img
@@ -151,9 +151,16 @@
             bg-[#3d3d3d] border-2 border-[#212121]
             hover:scale-125 active:bg-[#e24844]
             transition-all duration-150"
+    id="save-city-button"
 >
     <PlusOutline class="w-6 mx-auto" />
 </button>
+<Tooltip
+    placement="bottom"
+    triggeredBy={`#save-city-button`}
+    class="max-w-[224px] p-2 border-1 border-[#F3EFD4] bg-[#212121] text-[#F3EFD4] text-center"
+    >Сохранить название города</Tooltip
+>
 
 <!-- *Селекторы -->
 <div

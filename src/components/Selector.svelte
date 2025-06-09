@@ -4,6 +4,7 @@
         DropdownItem,
         DropdownHeader,
         DropdownGroup,
+        Tooltip,
     } from "flowbite-svelte";
     import { SearchOutline, CloseOutline } from "flowbite-svelte-icons";
     import { slide } from "svelte/transition";
@@ -77,6 +78,8 @@
                 return [];
         }
     });
+
+    //let placement = "left";
 </script>
 
 <div class="w-[162px] h-[74px] rounded-lg bg-[#212121]">
@@ -88,14 +91,31 @@
     >
         <div class="absolute w-8 h-8 rounded-full selector-index">
             <p class="absolute">{index}</p>
-            <span class="absolute w-6 close-icon">
-                <CloseOutline onclick={() => selectTypeHandle("")} />
+            <span
+                class="absolute w-6 close-icon"
+                id={`cancel-selector-${index}`}
+            >
+                <CloseOutline
+                    onclick={() => selectTypeHandle("")}
+                    class="mx-auto"
+                />
             </span>
+            <Tooltip
+                placement="left"
+                triggeredBy={`#cancel-selector-${index}`}
+                class="p-2 border-1 border-[#F3EFD4] bg-[#212121] text-[#F3EFD4] text-center"
+                >Сбросить морфему</Tooltip
+            >
         </div>
         <p class="text-center cursor-pointer" id={`selector-header-${index}`}>
             {type ? type : "Не выбрано"}
         </p>
     </div>
+    <Tooltip
+        triggeredBy={`#selector-header-${index}`}
+        class="max-w-[162px] p-2 border-1 border-[#F3EFD4] bg-[#212121] text-[#F3EFD4] text-center"
+        >Выбор типа морфемы</Tooltip
+    >
 
     <Dropdown
         bind:isOpen={typeSelectorIsOpen}
@@ -136,8 +156,15 @@
             type="text"
             maxlength="10"
             class="w-full p-2 selector-input"
+            id={`selector-input-${index}`}
             placeholder="Рандом..."
         />
+        <Tooltip
+            placement="bottom"
+            triggeredBy={`#selector-input-${index}`}
+            class="max-w-[162px] p-2 translate-x-3 border-1 border-[#F3EFD4] bg-[#212121] text-[#F3EFD4] text-center"
+            >Рандомный или введенный текст</Tooltip
+        >
 
         <span
             inert={type === ""}
@@ -147,9 +174,16 @@
             <img
                 src={drop}
                 alt="drop-down"
+                id={`drop-icon-${index}`}
                 width="20"
                 class={`rotate-180 outline-0 ${type !== "" ? "cursor-pointer" : "opacity-60"}`}
             />
+            <Tooltip
+                placement="right"
+                triggeredBy={`#drop-icon-${index}`}
+                class="max-w-[224px] p-2 border-1 border-[#F3EFD4] bg-[#212121] text-[#F3EFD4] text-center"
+                >Раскрыть список морфем выбранного типа</Tooltip
+            >
         </span>
 
         <Dropdown

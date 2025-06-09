@@ -5,7 +5,7 @@
 
 <!-- *Основной контейнер -->
 <div
-    class="w-[1258px] h-[388px] p-1.5 mt-16 mb-18 rounded-lg cont-border-bg z-10"
+    class="w-[1200px] h-[388px] p-1.5 mt-16 mb-18 rounded-lg cont-border-bg z-10"
 >
     <div
         class="w-full h-full px-6 rounded-md main-cont-bg
