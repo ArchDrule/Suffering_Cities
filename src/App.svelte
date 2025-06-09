@@ -1,4 +1,6 @@
 <script>
+    import { onMount } from "svelte";
+
     //компоненты
     import Clouds from "./components/Clouds.svelte";
     import Navbar from "./components/Navbar.svelte";
@@ -7,58 +9,66 @@
     //картинки
     import logo from "@/assets/logo.png";
 
-    let selectors = $state([
-        {
-            index: 1,
-            type: "",
-            value: "",
-        },
-        {
-            index: 2,
-            type: "",
-            value: "",
-        },
-        {
-            index: 3,
-            type: "",
-            value: "",
-        },
-        {
-            index: 4,
-            type: "",
-            value: "",
-        },
-        {
-            index: 5,
-            type: "",
-            value: "",
-        },
-        {
-            index: 6,
-            type: "",
-            value: "",
-        },
-        {
-            index: 7,
-            type: "",
-            value: "",
-        },
-        {
-            index: 8,
-            type: "",
-            value: "",
-        },
-        {
-            index: 9,
-            type: "",
-            value: "",
-        },
-        {
-            index: 10,
-            type: "",
-            value: "",
-        },
-    ]);
+    onMount(() => {
+        if (!localStorage["vulgarity"]) localStorage["vulgarity"] = 0;
+
+        if (!localStorage["cities"])
+            localStorage["cities"] = JSON.stringify([]);
+
+        if (!localStorage["selectors"])
+            localStorage["selectors"] = JSON.stringify([
+                {
+                    index: 1,
+                    type: "",
+                    value: "",
+                },
+                {
+                    index: 2,
+                    type: "",
+                    value: "",
+                },
+                {
+                    index: 3,
+                    type: "",
+                    value: "",
+                },
+                {
+                    index: 4,
+                    type: "",
+                    value: "",
+                },
+                {
+                    index: 5,
+                    type: "",
+                    value: "",
+                },
+                {
+                    index: 6,
+                    type: "",
+                    value: "",
+                },
+                {
+                    index: 7,
+                    type: "",
+                    value: "",
+                },
+                {
+                    index: 8,
+                    type: "",
+                    value: "",
+                },
+                {
+                    index: 9,
+                    type: "",
+                    value: "",
+                },
+                {
+                    index: 10,
+                    type: "",
+                    value: "",
+                },
+            ]);
+    });
 </script>
 
 <main>

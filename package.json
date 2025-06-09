@@ -18,6 +18,7 @@
     "vite": "^6.3.5"
   },
   "dependencies": {
-    "@tailwindcss/cli": "^4.1.8"
+    "@tailwindcss/cli": "^4.1.8",
+    "sv-router": "^0.5.0"
   }
 }

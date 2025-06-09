@@ -1,4 +1,6 @@
 <script>
+    import { isActive } from "../router";
+
     import vignette from "@/assets/vignettes/vignette-0.png";
     import circleVignette from "@/assets/vignettes/circle-vignette.png";
 </script>
@@ -17,36 +19,55 @@
                 flex justify-between items-center"
         >
             <!-- Генератор -->
-            <div class="flex justify-center items-center">
+            <a
+                href={"/"}
+                class={`flex justify-center items-center ${isActive("/") ? "active-page" : ""}`}
+            >
                 <img
                     src={circleVignette}
                     alt="circle-vignette"
-                    class="absolute w-12 opacity-60"
+                    class="absolute w-12 opacity-60 circle-vignette"
                 />
-                <h2 class="text-shd cursor-pointer z-10">
+                <h2
+                    class="text-shd z-10 hover:scale-[115%] transition-all duration-100"
+                >
                     <cap>Г</cap>енератор
                 </h2>
-            </div>
+            </a>
 
             <!-- Сохраненное -->
-            <div class="flex justify-center items-center">
+            <a
+                href="/saves"
+                class={`flex justify-center items-center ${isActive("/saves") ? "active-page" : ""}`}
+            >
                 <img
                     src={circleVignette}
                     alt="circle-vignette"
-                    class="absolute w-12 opacity-60 hidden"
+                    class="absolute w-12 opacity-60 circle-vignette"
                 />
-                <h2 class="text-shd cursor-pointer z-10">Сохраненное</h2>
-            </div>
+                <h2
+                    class="text-shd z-10 hover:scale-[115%] transition-all duration-100"
+                >
+                    Сохраненное
+                </h2>
+            </a>
 
             <!-- Настройки -->
-            <div class="flex justify-center items-center">
+            <a
+                href="/settings"
+                class={`flex justify-center items-center ${isActive("/settings") ? "active-page" : ""}`}
+            >
                 <img
                     src={circleVignette}
                     alt="circle-vignette"
-                    class="absolute w-12 opacity-60 hidden"
+                    class="absolute w-12 opacity-60 circle-vignette"
                 />
-                <h2 class="text-shd cursor-pointer z-10">Настройки</h2>
-            </div>
+                <h2
+                    class="text-shd z-10 hover:scale-[115%] transition-all duration-100"
+                >
+                    Настройки
+                </h2>
+            </a>
         </div>
     </nav>
 </div>
@@ -62,5 +83,17 @@
         background-image: url(@/assets/wood-table-texture.jpg);
         background-size: 920px;
         background-position: top center;
+    }
+
+    .circle-vignette {
+        visibility: hidden;
+    }
+
+    .active-page .circle-vignette {
+        visibility: visible;
+    }
+
+    .active-page {
+        color: #fac24a;
     }
 </style>
