@@ -82,7 +82,7 @@
         class="absolute -translate-x-[548px] ml-4 mt-2 p-1.5 rounded-full flex items-center gap-2.5 bg-[rgba(0,0,0,0.6)]"
     >
         <a
-            href="https://github.com/ArchDrule/archdrule.github.io/tree/main"
+            href="https://github.com/ArchDrule/Suffering_Cities"
             target="_blank"
             class="p-0.5 rounded-full bg-white"
             id="git-icon"
